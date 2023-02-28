@@ -1,0 +1,18 @@
+<!ELEMENT Form (BaseDForm*, BaseHDForm*,Dict*)>
+<!ELEMENT BaseDForm (Detail+)>
+<!ELEMENT BaseHDForm (Head+, Detail+)>
+<!ELEMENT Head (#PCDATA)>
+<!ELEMENT Detail (#PCDATA)>
+<!ELEMENT ColumnMapping (#PCDATA)>
+<!ELEMENT ColumnListMapping (#PCDATA)>
+<!ELEMENT Dict (ColumnMapping*,ColumnListMapping*)>
+<!ATTLIST Form domainSpace CDATA #REQUIRED
+        domainSpaceName CDATA #REQUIRED>
+<!ATTLIST Head name CDATA #REQUIRED>
+<!ATTLIST Detail name CDATA #REQUIRED>
+<!ATTLIST BaseDForm primaryKeyName CDATA #REQUIRED>
+<!ATTLIST BaseHDForm primaryKeyName CDATA #REQUIRED>
+<!ATTLIST ColumnMapping keyName CDATA #REQUIRED
+        columnName CDATA #REQUIRED>
+<!ATTLIST ColumnListMapping columnName CDATA #REQUIRED
+        tableName CDATA #REQUIRED>
